@@ -1,0 +1,17 @@
+<a [routerLink]="['/home', country.cca3]" class="card_link">
+    <mat-card>
+        <img mat-card-image src={{country.flags.png}} alt={{country.flags.alt}}>
+        <br>
+        <mat-card-content>
+            <p class="header_para">
+                {{country.name.common}}
+            </p>
+            <div class="content">
+                <p><span class="sub_header_para">Population: </span><span>{{country.population.toLocaleString()}}</span>
+                </p>
+                <p><span class="sub_header_para">Region: </span><span>{{country.region}}</span></p>
+                <p><span class="sub_header_para">Capital: </span><span>{{country.capital[0]}}</span></p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</a>

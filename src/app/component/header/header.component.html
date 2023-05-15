@@ -1,0 +1,23 @@
+<p class="header">
+    <mat-toolbar color="primary">
+        <span>Where in the world?</span>
+        <span class="example-spacer"></span>
+        <div (click)="modeToggle()" style="cursor: pointer;">
+            <!-- {{darkMode?"Light mode":"Dark mode"}} -->
+            <div *ngIf="darkMode;else elseBlock">
+                <div style="display: flex;align-items: center;gap:0.5rem;">
+                    <mat-icon>light_mode</mat-icon>
+                    Light mode
+                </div>
+                
+            </div>
+            <ng-template #elseBlock>
+                <div style="display: flex;align-items: center;gap:0.5rem;">
+                    <mat-icon>dark_mode</mat-icon>
+                    Dark mode
+                </div>
+                
+            </ng-template>
+        </div>
+    </mat-toolbar>
+</p>

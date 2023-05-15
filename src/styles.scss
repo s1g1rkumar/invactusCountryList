@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-bg-header: white;
+    --color-bg: #fafafa;
+    --color-text: black;
+    --color-card: white;
+    --box-shadow: 0px 0px 7px #d3d3d347;
+}
+
+[data-theme="dark"] {
+    --color-bg-header: #262e39;
+    --color-bg: #202d36;
+    --color-text: white;
+    --color-card: #2b3743;
+    --box-shadow: 0px 0px 7px #25292e;
+
+}
+
+body {
+    background-color: var(--color-bg);
+}

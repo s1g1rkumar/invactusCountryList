@@ -1,0 +1,42 @@
+<div *ngIf="(countryList === null); else elseBlock">
+    <div style="width:100%;height:60vh;display: grid;place-content: center;place-items: center;">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <div class="home">
+        <div class="search">
+            <div class="search_input_box">
+                <div class="search_container">
+                    <div class="search_icon">
+                        <mat-icon aria-hidden="false" aria-label="search icon" fontIcon="search"></mat-icon>
+                    </div>
+                    <input type="text" name="search" #search (keyup)="filteredCountry(search.value)"
+                        placeholder="Search for a country...">
+                </div>
+
+            </div>
+            <div class="search_select_container">
+                <select name="singleSelect" #singleSelect (change)="getCountryByRegion(singleSelect.value)">
+                    <option value="">-- Filter by region --</option>
+                    <option *ngFor="let option of options" [value]="option.region">{{option.region}}</option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="country_container">
+            <div *ngFor="let country of countryList">
+                <!-- <div *ngIf="searchTerm !== '' "> -->
+
+                <!-- <div
+                        *ngIf="selectRegion === '' || country.region.toLowerCase().includes(selectRegion.toLowerCase())"> -->
+                <div class="country_wrapper">
+                    <app-country [country]="country"></app-country>
+                </div>
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+
+        </div>
+    </div>
+</ng-template>

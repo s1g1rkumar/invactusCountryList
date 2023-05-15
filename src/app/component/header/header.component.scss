@@ -1,0 +1,18 @@
+// @import "../../../styles.scss";
+
+// @media (prefers-color-scheme: dark) {
+    .header {
+        box-shadow: var(--box-shadow);
+        .mat-toolbar-single-row {
+            padding: 0 5vw;
+            background-color: var(--color-bg-header);
+            color: var(--color-text);
+
+            .example-spacer {
+                flex: 1 1;
+            }
+        }
+
+
+    }
+// }

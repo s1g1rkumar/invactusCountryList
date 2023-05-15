@@ -1,0 +1,33 @@
+<div class="country_details">
+    <button class="country_details_back_btn" (click)="goBack()">Back</button>
+    <br />
+    <br>
+    <div class="country_details_body">
+        <div class="country_details_left">
+            <img src={{countryDetails?.flags?.png}} alt={{countryDetails?.flags?.alt}}>
+        </div>
+        <div class="country_details_right">
+            <p class="header_para">{{countryDetails?.name?.common}}</p>
+            <br>
+            <div>
+                <div class="country_details_para">
+                    <p><span class="sub_header_para">Population:
+                        </span><span>{{countryDetails?.population.toLocaleString()}}</span></p>
+                    <p><span class="sub_header_para">Currencies: </span><span>{{"Euro"}}</span>
+                    </p>
+                </div>
+                <div class="country_details_para">
+                    <p><span class="sub_header_para">Region: </span><span>{{countryDetails?.region}}</span></p>
+                    <p><span class="sub_header_para">Capital: </span><span>{{countryDetails?.capital[0]}}</span>
+                    </p>
+                </div>
+                <div class="country_details_para">
+                    <p><span class="sub_header_para">Sub Region:
+                        </span><span>{{countryDetails?.subregion}}</span>
+                    </p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
